@@ -1,0 +1,29 @@
+#Subversion files
+.svn
+
+#Class/TMP files
+.class
+*.tmp
+
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+#Project files
+build/
+
+# Office Temp Files
+~$*
+
+# passwords are in here...
+build.xml
+
+# other files to ignore
+tsplugin.zip
+internal.war
+torrentscout.war
+TSLtest.war
+
+/ion-torrentscout-light/plugins/torrentscout.zip
+/build
+/bin
