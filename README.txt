@@ -6,3 +6,13 @@ Simulation\src\org\physics\epr\hiddenvars
 
 And by changing the class used in the main class:
 Simulation\src\org\physics\epr\gui\SimulationTopComponent
+
+The current version is able to break it - but only by allowing non-detection:
+
+See class CloseFormula:
+ if (Math.random()<=pdetect) return spin;
+ else return Integer.MIN_VALUE;
+
+By allowing the non-detection of certain particles, the CHSH inequality can be broken.
+
+I would claim that this is the only way to break it...  ;-) 

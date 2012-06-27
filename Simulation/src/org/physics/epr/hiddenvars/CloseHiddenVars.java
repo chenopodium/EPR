@@ -24,12 +24,10 @@ public class CloseHiddenVars implements HiddenVariablesIF {
 
     @Override
     public String getFormula() {
-        String s = "public void shareHiddenVariables(Particle pA, Particle pB) {\n";
-        s += "double theta = Math.PI/2.0 * (double)(count )/ (double)Setup.rotation_sampling;\n";       
-        s += "if (count > (double)Setup.rotation_sampling) count = 0;\n";
-        s += "pA.setTheta(theta);\n";
-        s += "pB.setTheta(theta);\n";
-        s += "return s;\n";
+        String s = " double theta = Math.PI/2.0 * (double)(count++ )/ (double)Setup.rotation_sampling;\n"+        
+        " if (count > (double)Setup.rotation_sampling) count = 0;\n"+
+        " pA.setTheta(theta);\n"+
+        " pB.setTheta(theta);\n";
         s += "}\n";
         return s;
     }

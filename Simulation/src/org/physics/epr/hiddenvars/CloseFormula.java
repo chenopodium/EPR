@@ -21,13 +21,12 @@ public class CloseFormula implements MeasurementFormulaIF {
 
     @Override
     public String getFormula() {
-        String s = "public int measure(double filter_angle, Particle particle) {\n"
-                + "   double theta = particle.getTheta();\n"
-                + "   int spin = (int) Math.signum(Math.sin(theta+ filter_angle));\n"
-                + "   double pdetect = 2.3*Math.abs(Math.sin(theta + filter_angle));\n"
-                + "   if (Math.random()<=pdetect) return spin;\n"
-                + "   else return Integer.MIN_VALUE;\n"
-                + "}\n";
+        String s = "    double theta = particle.getTheta();\n"+
+        "   int spin = (int) Math.signum(Math.sin(theta+ filter_angle));\n"+
+        "   double pdetect = 2.3*Math.abs(Math.sin(theta + filter_angle));\n"+        
+        "   if (Math.random()<=pdetect) return spin;\n"+
+        "   else return Integer.MIN_VALUE;\n"+
+         "}\n";
         return s;
     }
 }
